@@ -18,7 +18,7 @@ const AdminSchema = new Schema<AdminTypes>({
         type: String,
         required: true,
     },
-});
+}, {timestamps: true});
 
 const adminModel = models?.Admin || model<AdminTypes>("Admin", AdminSchema);
 
