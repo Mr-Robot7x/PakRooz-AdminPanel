@@ -50,186 +50,42 @@ async function page({
             </div>
           </div>
           <div className="flex items-start mt-5 justify-start gap-y-4 flex-col">
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
+            {[1, 2, 3, 4, 5, 6].map((index) => (
+              <div
+                key={index}
+                className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg"
+              >
+                <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
+                  <Image
+                    alt="product images"
+                    src={laptop}
+                    fill
+                    quality={60}
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="w-11/12">
+                  <span className="line-clamp-1 font-semibold text-[15px]">
+                    Ponse Body Lotion For Summer Season Man / Females
                   </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
+                  <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
+                    lotion for men and women in winter for dry skins, newly
+                    lunch
                   </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
+                  <div className="flex justify-start gap-4 text-gray-300">
+                    <span className="flex items-center text-sm gap-1">
+                      <DollarSign size={16} /> 34
+                    </span>
+                    <span className="flex items-center text-sm gap-1">
+                      <ListTodo size={16} /> Cousmetics
+                    </span>
+                    <span className="flex items-center text-sm gap-1">
+                      <SwatchBook size={16} /> 7
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="border-b w-full flex gap-3 items-center p-1 transition-colors hover:bg-secondary cursor-pointer rounded-lg">
-              <div className="w-16 h-16 bg-secondary rounded-lg relative overflow-hidden ">
-                <Image
-                  alt="product images"
-                  src={laptop}
-                  fill
-                  quality={60}
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="w-full">
-                <span className="line-clamp-1 font-semibold text-[15px]">
-                  Ponse Body Lotion For Summer Season Man / Females
-                </span>
-                <span className="text-[12px] text-gray-200 -mt-0.5 line-clamp-1">
-                  lotion for men and women in winter for dry skins, newly lunch
-                </span>
-                <div className="flex justify-start gap-4 text-gray-300">
-                  <span className="flex items-center text-sm gap-1">
-                    <DollarSign size={16} /> 34
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <ListTodo size={16} /> Cousmetics
-                  </span>
-                  <span className="flex items-center text-sm gap-1">
-                    <SwatchBook size={16} /> 7
-                  </span>
-                </div>
-              </div>
-            </div>
+            ))}
 
             <Button className="mx-auto mt-2" variant={"ghost"}>
               View All Products <ArrowRight />

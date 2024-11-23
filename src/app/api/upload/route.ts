@@ -3,6 +3,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs';
 import path from 'path';
 import os from 'os'; // For getting the OS-specific temporary directory
+import extractPublicIdFromUrl from '@/lib/ExtractPublicID';
 
 // Configure Cloudinary
 cloudinary.config({
@@ -54,3 +55,34 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error }, { status: 500 });
   }
 }
+
+export async function deleteImage(url: string) {
+  console.log('comes here');
+  
+  const publicID = extractPublicIdFromUrl(url);
+  console.log('public_id' , publicID);
+  
+  if (!publicID) {
+    console.error("Invalid image URL:", publicID);
+    return false
+  }
+
+  try {
+    await cloudinary.api.delete_resources([publicID], {
+      type: 'upload',
+      resource_type: 'image',
+
+    } ,(error, result) => {
+      if (error) {
+        console.error("Error deleting image:", error);
+      } else {
+        console.log("Image deleted:", result);
+        return true
+      }
+    });
+  } catch (error) {
+    console.error("Error deleting image:", error);
+    return false
+  }
+}
+

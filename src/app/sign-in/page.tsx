@@ -76,11 +76,11 @@ export function SignInForm() {
   }
 
   return (
-    <section className="bg-gray-50 w-full min-h-screen flex justify-center pt-20">
+    <section className="w-full min-h-screen flex justify-center pt-20">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="bg-white space-y-5 p-10 md:w-[400px] rounded-3xl shadow-2xl shadow-rose-100 h-max"
+          className=" space-y-5 p-10 md:w-[400px] bg-card z-50 rounded-3xl border-primary border shadow-2xl shadow-primary/30 h-max"
         >
           <h2 className="text-center">
             Login Into <span className="text-red-500 ">PakRooz</span>
@@ -126,6 +126,17 @@ export function SignInForm() {
           </Button>
         </form>
       </Form>
+      <svg
+        className="absolute left-0 -z-30 bottom-0"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#dc2626"
+          fillOpacity="1"
+          d="M0,128L48,154.7C96,181,192,235,288,218.7C384,203,480,117,576,112C672,107,768,181,864,213.3C960,245,1056,235,1152,202.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
   );
 }

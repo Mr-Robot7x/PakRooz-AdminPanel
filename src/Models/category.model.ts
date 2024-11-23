@@ -6,7 +6,7 @@ interface ICategory extends Document {
   name: string;
  
   description?: string;
-  images?: string;
+  images?: string[];
 }
 
 // Define the schema for categories

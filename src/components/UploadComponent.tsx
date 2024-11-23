@@ -4,14 +4,24 @@ import React, { useState } from "react";
 
 interface ImageUploaderProps {
   onUploadComplete?: (uploadedUrls: string[]) => void;
+  imagesUrl?: string[];
 }
 
-const ImageUploader: React.FC<ImageUploaderProps> = ({ onUploadComplete }) => {
+const ImageUploader: React.FC<ImageUploaderProps> = ({
+  onUploadComplete,
+  imagesUrl,
+}) => {
   const [images, setImages] = useState<File[]>([]);
   const [previewUrls, setPreviewUrls] = useState<string[]>([]);
   const [uploading, setUploading] = useState(false);
-  const [uploadedUrls, setUploadedUrls] = useState<string[]>([]);
+  const [uploadedUrls, setUploadedUrls] = useState<string[]>(imagesUrl || []);
   const [error, setError] = useState<string | null>(null); // New state for errors
+
+  console.log("Uploaded URLScc :: ", uploadedUrls);
+
+  if (uploadedUrls && onUploadComplete) {
+    onUploadComplete(uploadedUrls);
+  }
   const handleFilesUpload = (files: FileList | null) => {
     if (!files) return;
     const newImages = Array.from(files);
